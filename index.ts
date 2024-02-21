@@ -1,7 +1,7 @@
 import fs from 'fs'
-import ScraperSinapi from '@/class/ScraperSinapi'
+import ScraperSinapi from './ScraperSinapi'
 
-function main() {
+async function main() {
   const scraper = new ScraperSinapi()
   await scraper.init()
   await scraper.clickAcceptCookie()
@@ -13,3 +13,5 @@ function main() {
 
   return Response.json('Sinapi works!')
 }
+
+main()
