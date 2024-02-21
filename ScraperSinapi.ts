@@ -14,7 +14,7 @@ export default class Scraper {
 
   async init(): Promise<void> {
     console.log('Busca iniciada')
-    this.browser = await puppeteer.launch({ headless: true })
+    this.browser = await puppeteer.launch({ headless: false })
     this.page = await this.browser.newPage()
     if (process.env.SINAPI_URL) await this.page.goto(process.env.SINAPI_URL)
   }
