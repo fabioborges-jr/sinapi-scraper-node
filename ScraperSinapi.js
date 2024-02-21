@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var puppeteer_1 = require("puppeteer");
+require("dotenv/config");
 var Scraper = /** @class */ (function () {
     function Scraper() {
     }

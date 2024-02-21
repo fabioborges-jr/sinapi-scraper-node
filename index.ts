@@ -1,4 +1,4 @@
-import fs from 'fs'
+import {promises as fs} from 'fs'
 import ScraperSinapi from './ScraperSinapi'
 
 async function main() {
@@ -7,7 +7,7 @@ async function main() {
   await scraper.clickAcceptCookie()
   const list = JSON.stringify(await scraper.getAllFilesHref())
 
-  fs.writeFile('src/data/sinapi.txt', list, 'utf-8', (error) => {
+  fs.writeFile('sinapi.txt', list, 'utf-8', (error) => {
     if (error) throw error
   })
 

@@ -55,7 +55,7 @@ function main() {
                     return [4 /*yield*/, scraper.getAllFilesHref()];
                 case 3:
                     list = _b.apply(_a, [_c.sent()]);
-                    fs_1.default.writeFile('src/data/sinapi.txt', list, 'utf-8', function (error) {
+                    fs_1.promises.writeFile('sinapi.txt', list, 'utf-8', function (error) {
                         if (error)
                             throw error;
                     });

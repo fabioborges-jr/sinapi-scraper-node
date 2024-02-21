@@ -1,4 +1,5 @@
 import puppeteer, { Browser, Page } from 'puppeteer'
+import 'dotenv/config'
 
 type Reference = {
   state: string
